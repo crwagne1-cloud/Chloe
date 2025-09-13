@@ -1,0 +1,219 @@
+/* Fonts */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 0.5rem;
+}
+
+/* Header & Navigation */
+header {
+  background: #f6c8c1;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+}
+
+nav ul li a:hover {
+  background: #dbb0a9;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #dbb0a9;
+  min-width: 150px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.profile-pic {
+  max-width: 200px;
+  border-radius: 100px;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Footer */
+footer {
+  background:#dbb0a9;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.profile-grid img {
+  width: 100%;
+  border-radius: 100px;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 100px;
+  display: block;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.profile-pic:hover {
+  border: 3px solid #f7e4e1; /* dark border on hover */
+  transform: scale(1.05);    /* optional: slightly enlarges image */
+}
+.profile-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 100px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.profile-container:hover .profile-pic {
+  border-color: #2c3e50;
+  transform: scale(1.05);
+}
+
+/* Bubble appears UNDER the image */
+.hover-bubble {
+  position: absolute;
+  top: 105%;  /* places bubble just below the image */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  background: #ffffff;
+  border: 2px solid #2c3e50;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.hover-bubble h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.hover-bubble p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.profile-container:hover .hover-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px); /* smooth slide down */
+}
+.hover-bubble a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.hover-bubble a:hover {
+  border-color: #2c3e50;
+}
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.project-card {
+  background: #fff;
+  border: 2px solid #2c3e50;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.project-card img {
+  width: 100%;          /* fills card width */
+  height: auto;         /* keeps correct aspect ratio */
+  border-radius: 8px;   /* slightly rounded corners */
+  margin-bottom: 0.8rem;
+  object-fit: cover;    /* crop if needed without distortion */
+  max-height: 200px;    /* optional: keep images from being too tall */
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
