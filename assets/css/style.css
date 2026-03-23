@@ -95,6 +95,15 @@ footer {
   max-width: 800px;
   margin: auto;
 }
+.center-img {
+  display: block; /* Images are inline by default, so they need to be changed to block-level elements for auto margins to work */
+  margin-left: auto;
+  margin-right: auto;
+  /* Optional: ensure responsiveness */
+  max-width: 100%;
+  height: auto;
+}
+
 
 .profile-grid img {
   width: 100%;
