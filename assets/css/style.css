@@ -226,6 +226,7 @@ footer {
 }
 .side {
   display: flex; /* Aligns children side-by-side */
+  flex-direction:row-reverse;
   align-items: flex-start; /* Aligns items to the start vertically */
 }
 .sidebar-image {
